@@ -11,7 +11,7 @@ class TodolistsController < ApplicationController
     
     list.save
     
-    redirect_to "/top"
+    redirect_to '/top'
     
   end
   
