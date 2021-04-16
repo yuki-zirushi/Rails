@@ -20,6 +20,9 @@ class TodolistsController < ApplicationController
     
   end
   
+  def show
+  end
+  
   private
   
   def list_params
