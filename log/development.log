@@ -874,3 +874,62 @@ Processing by TodolistsController#edit as HTML
 Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 111.239.254.111 at 2021-04-16 04:20:38 +0000
+Cannot render console from 111.239.254.111! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todolists/4/edit" for 111.239.254.111 at 2021-04-16 04:21:06 +0000
+Cannot render console from 111.239.254.111! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:28
+  Rendering todolists/edit.html.erb within layouts/application
+  Rendered todolists/edit.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 238ms (Views: 211.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/todolists/4/edit" for 111.239.254.111 at 2021-04-16 04:21:09 +0000
+Cannot render console from 111.239.254.111! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:28
+  Rendering todolists/edit.html.erb within layouts/application
+  Rendered todolists/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/todolists/4" for 111.239.254.111 at 2021-04-16 04:21:25 +0000
+Cannot render console from 111.239.254.111! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kD9_zfEQ7DSgf4q3etVx0PCRWjJQxfPV592PWiWU4UVrypoAqzyufv_CZB5OaJCSgbLtUtQsEwM1uSBoefdl3g", "list"=>{"title"=>"railsの勉強3", "body"=>"編集機能"}, "commit"=>"保存", "id"=>"4"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todolists_controller.rb:33
+  [1m[36mList Update (1.6ms)[0m  [1m[33mUPDATE "lists" SET "body" = ?, "updated_at" = ? WHERE "lists"."id" = ?[0m  [["body", "編集機能"], ["updated_at", "2021-04-16 04:21:25.746785"], ["id", 4]]
+  ↳ app/controllers/todolists_controller.rb:33
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todolists_controller.rb:33
+Redirected to https://dd06b69eb5454b668405d1d06c520812.vfs.cloud9.us-east-1.amazonaws.com/todolists/4
+Completed 302 Found in 14ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/todolists/4" for 111.239.254.111 at 2021-04-16 04:21:26 +0000
+Cannot render console from 111.239.254.111! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:24
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
