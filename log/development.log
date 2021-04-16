@@ -715,3 +715,62 @@ Processing by TodolistsController#index as HTML
 Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 111.239.254.37 at 2021-04-16 02:45:44 +0000
+Cannot render console from 111.239.254.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todolists/new" for 111.239.254.37 at 2021-04-16 02:46:01 +0000
+Cannot render console from 111.239.254.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 244ms (Views: 227.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/todolists/new" for 111.239.254.37 at 2021-04-16 02:46:06 +0000
+Cannot render console from 111.239.254.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todolists" for 111.239.254.37 at 2021-04-16 02:46:41 +0000
+Cannot render console from 111.239.254.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i5JK_GqvQ7yrTBtJBbh3FVjxJdYdkgNg1g65-KxnNQWHrHG6tuoFV7azCe83AXUC0WP51FlqvTi7w4ExBrGwXQ", "list"=>{"title"=>"投稿すると", "body"=>"詳細ページに移動します"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todolists_controller.rb:12
+  [1m[36mList Create (1.7ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "投稿すると"], ["body", "詳細ページに移動します"], ["created_at", "2021-04-16 02:46:41.655797"], ["updated_at", "2021-04-16 02:46:41.655797"]]
+  ↳ app/controllers/todolists_controller.rb:12
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todolists_controller.rb:12
+Redirected to https://dd06b69eb5454b668405d1d06c520812.vfs.cloud9.us-east-1.amazonaws.com/todolists/5
+Completed 302 Found in 14ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/todolists/5" for 111.239.254.37 at 2021-04-16 02:46:41 +0000
+Cannot render console from 111.239.254.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:24
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todolists/new" for 111.239.254.37 at 2021-04-16 02:47:10 +0000
+Cannot render console from 111.239.254.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
