@@ -15,6 +15,9 @@ class TodolistsController < ApplicationController
     
   end
   
+  def index
+  end
+  
   private
   
   def list_params
